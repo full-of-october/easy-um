@@ -1,0 +1,24 @@
+@import "_tailwind";
+@import "_bootstrap";
+@import "_variables";
+@import "_mixins";
+@import "_fonts";
+@import "_general";
+@import "_header";
+@import "_components";
+@import "_blocks";
+@import "_footer";
+@import "_modal";
+@import "_vendor-custom";
+
+
+.header {
+  color: red;
+  @include sm {
+    font-size: 14px;    
+  }
+  @include md {
+    font-size: 18px;
+  }
+}
+

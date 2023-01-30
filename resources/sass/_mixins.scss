@@ -1,0 +1,38 @@
+@mixin desktop-max {
+    @media screen and ( min-width: calc(#{$tablet-max-width} + 1px) ) {
+        @content;
+    }
+}
+@mixin tablet-max {
+    @media screen and (max-width: $tablet-max-width) {
+        @content;
+    }
+}
+@mixin mobile-max {
+    @media screen and (max-width: $mobile-max-width) {
+        @content;
+    }
+}
+
+// Responsive
+
+@mixin xl {
+    @media screen and ( min-width: $xl-screen ) {
+        @content;
+    }
+}
+@mixin lg {
+    @media screen and ( min-width: $lg-screen ) {
+        @content;
+    }
+}
+@mixin md {
+    @media screen and (min-width: $md-screen) {
+        @content;
+    }
+}
+@mixin sm {
+    @media screen and (min-width: $sm-screen) {
+        @content;
+    }
+}

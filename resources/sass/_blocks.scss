@@ -1,0 +1,339 @@
+.block-homescreen {
+    
+    padding-top: 200px;
+    // padding-bottom: 115px;
+    padding-bottom: 80px;
+    @include tablet-max {
+        padding-top: 166px;
+        padding-bottom: 70px;
+    }
+    @include mobile-max {
+        padding-top: 90px;
+        // padding-bottom: 60px;
+        padding-bottom: 70px;
+    }
+    .container {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .text {
+        max-width: 660px;
+        width: 60%;
+        position: relative;
+        z-index: 2;
+        @include tablet-max {
+            width: 56%;
+        }
+        @include mobile-max {
+            width: 100%;
+        }
+    }
+    .home-title {
+        font-size: 56px;
+        letter-spacing: 0.05em;
+        margin-bottom: 16px;
+        @include tablet-max {
+            font-size: 36px;
+            line-height: 1.22;
+        }
+        @include mobile-max {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+        span {
+            @include mobile-max {
+                display: block;
+            }
+        }
+    }
+    p {
+        display: block;
+        max-width: 470px;
+        @include tablet-max {
+            font-size: 12px;
+            line-height: 1.33;
+            max-width: 340px;
+        }
+        @include mobile-max {
+            // width: calc(50% - 8px);
+            width: 100%;
+            max-width: 100%;
+        }
+        + p {
+            margin-top: 24px;
+            @include tablet-max {
+                margin-top: 16px;
+            }
+        }
+    }
+    .btn {
+        margin-top: 48px;
+    }
+    .figure {
+        position: absolute;
+        // right: -82px;
+        right: 0;
+        bottom: 0;
+        width: 60%;
+        // max-width: 690px;
+        height: 400px;
+        max-width: 470px;
+        border-radius: 128px 128px 0px 128px;
+        background-color: #F3F3F7;
+        display: flex;
+        // align-items: center;
+        img {
+            // width: 100%;
+            margin: -175px -50px -110px -170px;
+            // width: auto;
+            max-width: 670px;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @include tablet-max {
+                width: 100%;
+                top: 50% !important;
+                left: 50% !important;
+                // margin: auto;
+                // position: absolute;
+                // top: 50%;
+                // transform: translateY(-50%);
+            }
+            @include mobile-max {
+                width: 340px;
+                top: 30px !important;
+                left: 20px !important;
+                transform: none;
+            }
+        }
+    }
+
+    .figure-mob {
+        display: none;
+        @include mobile-max {
+            display: block;
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+.block-teams {
+    .container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 32px;
+        align-items: end;
+        @include tablet-max {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 60px;
+        }
+        @include mobile-max {
+            // gap: $block-title-bottom-gap-mobile;
+            gap: 60px;
+        }
+    }
+    .text-column {
+        @include tablet-max {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        br {
+            @include tablet-max {
+                display: none;
+            }
+        }
+    }
+    .figure {
+        // display: block;
+        width: 100%;
+        margin-top: 40px;
+        border-radius: 128px 128px 0px 128px;
+        // background-color: $theme-color-light;
+        background-color: #F3F3F7;
+        position: relative;
+        display: flex;
+        height: 490px;
+        @include tablet-max {
+            display: none;
+            // background-color: $theme-color-light;
+        }
+        @include mobile-max {
+            margin-top: 60px;
+            display: block;
+            border-radius: 64px 64px 0px 64px;
+            padding-bottom: 75%;
+        }
+        img {
+            width: 100%;
+            max-width: 560px;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @include tablet-max {
+                top: 50% !important;
+                left: 50% !important;
+            }
+            @include mobile-max {
+                // position: absolute;
+                width: 150%;
+                max-width: 512px;
+                margin: auto;
+                top: -50% !important;
+                left: -50% !important;
+                right: -50%;
+                bottom: -50%;
+                transform: initial;
+            }
+        }
+    }
+    .swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+        @include desktop-max {
+            transform: initial !important;
+        }
+        @include tablet-max {
+            flex-direction: row;
+        }
+    }
+    .swiper-slide {
+        transition: $duration;
+        height: auto;
+        @include tablet-max {
+            opacity: .54;
+        }
+        @include tablet-max {
+            width: 36%; // 250/698
+        }
+        @include mobile-max {
+            width: 76%; // 250/328
+            max-width: 480px;
+        }
+        &-active,
+        &-next {
+            @include tablet-max {
+                opacity: 1;
+            }
+        }
+        &-next {
+            &:nth-last-child(-n+2) {
+                + .swiper-slide {
+                    opacity: 1;
+                }
+            }
+        }
+        &:not(:last-child) {
+            margin-bottom: 8px;
+            @include tablet-max {
+                margin-bottom: 0;
+                margin-right: 20px;
+            }
+        }
+    }
+    .team-item {
+        width: 100%;
+        padding: 24px;
+        background-color: #fff;
+        transition: $duration;
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        @include tablet-max {
+            box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &:hover {
+            box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
+
+            .team-item-btn {
+                opacity: 1;
+            }
+        }
+        &-info {
+            margin-right: 24px;
+            @include mobile-max {
+                margin-right: 0;
+                margin-bottom: auto;
+            }
+        }
+        &-icon {
+            padding-left: 10px;
+            padding-bottom: 10px;
+            flex-shrink: 0;
+            margin-right: 24px;
+            position: relative;
+            @include tablet-max {
+                margin-right: 0;
+            }
+            .inner {
+                width: 56px;
+                height: 56px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                // background: #FFFFFF;
+                box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
+                border-radius: 12px;
+                position: relative;
+                z-index: 2;
+                img, svg {
+                    // max-width: 32px;
+                    max-width: 56px;
+                    // max-height: 32px;
+                    max-height: 56px;
+                    object-fit: contain;
+                }
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 56px;
+                height: 56px;
+                border-radius: 12px;
+            }
+        }
+        &-title {
+            font-family: $title-font;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.56;
+            color: #000;
+            @include tablet-max {
+                margin-top: 24px;
+            }
+        }
+        &-descr {
+            margin-top: 8px;
+            font-size: 12px;
+            line-height: 1.33;
+            color: #4A46;
+        }
+        &-btn {
+            flex-shrink: 0;
+            opacity: 0;
+            transition: $duration;
+            @include tablet-max {
+                margin-top: 24px;
+                opacity: 1;
+            }
+        }
+    }
+}
