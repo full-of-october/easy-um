@@ -62,12 +62,32 @@ gulp.task("sass", function (done) {
     done();
 });
 
+gulp.task("sass-build", function (done) {
+    return gulp
+        .src(stylesAll)
+        .pipe(sass())
+        .pipe(postcss([tailwindcss('./tailwind.config.js')]))
+        .pipe(concat("styles.css"))
+        .pipe(gulp.dest('./docs/css/'))
+
+    done();
+});
+
 gulp.task("js", function (done) {
     return gulp
         .src(scriptsAll)
         .pipe(concat("scripts.js"))
         .pipe(gulp.dest(scriptsProdDir))
         .pipe(browserSync.reload({ stream: true }));
+
+    done();
+});
+
+gulp.task("js-build", function (done) {
+    return gulp
+        .src(scriptsAll)
+        .pipe(concat("scripts.js"))
+        .pipe(gulp.dest('./docs/js/'))
 
     done();
 });
@@ -91,6 +111,24 @@ gulp.task("html", function (done) {
     done();
 });
 
+gulp.task("html-build", function (done) {
+    return gulp
+        .src('./resources/twig/pages/*.twig')
+        .pipe(twig({
+            data: {
+                title: 'Gulp and Twig',
+                benefits: [
+                    'Fast',
+                    'Flexible',
+                    'Secure'
+                ]
+            }
+        }))
+        .pipe(gulp.dest('./docs/'))
+
+    done();
+});
+
 gulp.task(
     "watch",
     gulp.series("html", "sass", "js", "browser-sync", function (done) {
@@ -106,3 +144,11 @@ gulp.task(
         done();
     })
 );
+
+gulp.task(
+    "build",
+    gulp.series("html-build", "sass-build", "js-build", function (done) {
+        done();
+    })
+);
+
