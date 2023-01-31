@@ -1,0 +1,40 @@
+.number-span {
+    color: rgba(188, 212, 255, 0.6);
+    font-family: 'Golos';
+    font-weight: 900;
+    font-size: 52px;
+    @include lg {
+        font-size: 100px;
+    }
+}
+
+.number-span-text {
+    line-height: 120%;
+    position: absolute;
+    white-space: nowrap;
+    top: 50%;
+    transform: translate(0, -50%);
+    @include lg {
+        font-size: 16px;
+        white-space: normal;
+        min-width: 140px;
+        top: 63%;
+    }
+}
+
+.div-info {
+    background: #F4F7FF;
+    border-radius: 30px;
+}
+
+.course-card {
+    background: #337CFC;
+    border-radius: 10px;
+    max-width: 220px;
+    overflow: hidden;
+    // height: 100%;
+    @include lg {
+        max-width: 385px;
+    }
+}
+

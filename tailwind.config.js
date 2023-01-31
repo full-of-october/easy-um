@@ -14,7 +14,7 @@ module.exports = {
           '2xl': '1200px',
         },
         padding: {
-          DEFAULT: '15px',
+          DEFAULT: '12px',
         },
       },
 
@@ -40,6 +40,10 @@ module.exports = {
 				h5: '15px',
 				h6: '12px',
 			},
+
+      fontFamily: {
+        golos: ['Golos', 'Arial', 'sans-serif']
+      }
     },
   },
   plugins: [

@@ -22,3 +22,134 @@
   }
 }
 
+// .class {
+//   @include min(1400) {
+//     width: 100px;
+//   }
+// }
+
+.title-img {
+  width: 330px;
+  height: 330px;
+  @include min(768) {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.number-span-text-11 {
+  left: 80%;
+}
+
+.number-span-text-24 {
+  left: 75%;
+}
+
+.number-span-text-09 {
+  left: 70%;
+}
+
+.number-span-text-75 {
+  left: 46%;
+}
+
+.inside-icon {
+  display: block;
+}
+
+
+.inside-star-icon {
+  width: 8px;
+  height: 9px;
+  background: url(../img/icons/star.svg);
+  background-size: cover;
+  @include lg {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.inside-charge-icon {
+  width: 7px;
+  height: 9px;
+  background: url(../img/icons/charge.svg);
+  background-size: cover;
+  margin-right: 4px;
+  @include lg {
+    width: 11px;
+    height: 15px;
+  }
+}
+
+.container .btn-tabs {
+  border: none;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 400;
+  background: #FFFFFF;
+  color: #252525;
+  padding: 11px 13px;
+}
+
+.container .btn-tabs:hover {
+  background: #337CFC;
+  color: #FFFFFF;
+  font-weight: 700
+}
+
+.btn-secondary-black {
+  background:none;
+  color: #252525;
+  border: 1px solid #252525;
+  border-radius: 30px;
+  font-weight: 400;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+}
+
+.btn-secondary-blue {
+  background:none;
+  color: #337CFC;
+  border: 1px solid #337CFC;
+  border-radius: 30px;
+  font-weight: 400;
+  font-family: 'Golos';
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  @include lg {
+    font-size: 15px;
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.black-tick {
+  background: url(../img/icons/black_tick.svg);
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 8px;
+  height: 5px;
+}
+
+.blue-tick {
+  background: url(../img/icons/blue_tick.svg);
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 8px;
+  height: 5px;
+  @include lg {
+    width: 14px;
+    height: 8px;
+  } 
+}

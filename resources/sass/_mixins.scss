@@ -36,3 +36,9 @@
         @content;
     }
 }
+
+@mixin min($min) {
+    @media screen and (min-width: #{$min}px) {
+        @content;
+    }
+}
