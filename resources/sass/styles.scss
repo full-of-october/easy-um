@@ -83,18 +83,24 @@
 
 .container .btn-tabs {
   border: none;
+  
+}
+
+.container .btn-tabs button {
+  cursor: pointer;
+  padding: 11px 13px;
+  transition: all 0.3s ease-in-out;
+  background: #FFFFFF;
   border-radius: 50px;
   font-size: 12px;
   font-weight: 400;
-  background: #FFFFFF;
   color: #252525;
-  padding: 11px 13px;
 }
 
-.container .btn-tabs:hover {
+.container .btn-tabs button:hover {
   background: #337CFC;
   color: #FFFFFF;
-  font-weight: 700
+  // font-weight: 700;
 }
 
 .btn-secondary-black {
@@ -126,6 +132,11 @@
     font-size: 15px;
     justify-content: center;
     gap: 12px;
+  }
+  &:hover {
+    background: #FFFFFF;
+    border: 1px solid #337CFC;
+    color: #337CFC;
   }
 }
 
