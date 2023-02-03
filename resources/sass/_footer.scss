@@ -1,0 +1,107 @@
+.footer {
+  position: relative;  
+  background-color: #337CFC;
+  padding-bottom: 53px;
+  color: #ffffff;
+  font-family: 'Golos', Arial, sans-serif;
+  padding-left: 18px;
+  padding-right: 18px;
+  &:before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 660px;
+    top: -69px;
+    left: 0;
+    background-image: url('../img/layouts/footer-wave.png');
+    background-size: contain;
+    background-position: 50% 0;
+    @include lg {
+      top: -125px;
+      background-size: cover;
+    }
+  }
+
+  @include lg {
+    padding-bottom: 225px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  &-title {
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  
+
+
+  .container {
+    margin-top: -50px;
+  }
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.footer-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  &-right {
+    max-width: 130px;
+    @include lg {
+      max-width: 100%;
+    }
+  }
+
+  @include lg {
+    max-width: 170px;
+    display: block;
+  }
+}
+
+.footer-nav {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+
+  &-list {
+    padding-left: 0;
+    min-width: 200px;
+  }
+
+  &-item {
+    margin-bottom: 9px;
+  }
+
+  &-link {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #F1F1F1;
+    transition: all 1.25s ease;
+    &:hover {
+      color: #ffffff;
+      font-weight: 500;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 0;
+}
+
+.accordion-button.collapsed .icon{
+  transform: rotate(0);
+}
+
+.accordion-button .icon {
+  transform: rotate(-180deg);
+}
