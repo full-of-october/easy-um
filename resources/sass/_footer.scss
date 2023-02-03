@@ -1,0 +1,53 @@
+.footer-bg {
+    background: url(../img/index/wave_footer_mob.png);
+    height: 600px;
+    padding: 58px 30px 0 30px;
+    @include lg {
+        background: url(../img/index/wave_footer.png);
+    }
+}
+
+.btn-secondary-white {
+    background:none;
+    color: white;
+    font-weight: 700;
+    font-family: 'Golos';
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 17px;
+    border-radius: 0;
+    width: 315px;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+    @include lg {
+        // display: none;
+    }
+    &:hover {
+        background: none;
+        border: none;
+        color: white;
+    }
+}
+
+.white-tick {
+    background: url(../img/icons/white_tick.svg);
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 6px;
+}
+
+.dropdown-menu-body {
+    width: 315px;
+    background: #337CFC;
+    border: none;
+}
+
+.dropdown-item {
+    font-family: 'Golos';
+    font-size: 15px;
+    color: #F1F1F1;
+    margin-bottom: 9px;
+}

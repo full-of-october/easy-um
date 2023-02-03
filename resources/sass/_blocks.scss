@@ -337,3 +337,123 @@
         }
     }
 }
+
+// rent block
+
+.bg-wave {
+    background: url(../img/index/wave.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+}
+
+.bg-wave-padding {
+    padding: 24px 0 80px 0;
+    @include md {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.bg-wave-img {
+    border-radius: 35px;
+    overflow: hidden;
+    width: 300px;
+    margin: 0 auto;
+    @include lg {
+        border-radius: 50%;
+    }
+}
+
+.main-title {
+    font-family: 'Golos';
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 104%;
+    color: #FFFFFF;
+    @include lg {
+        font-size: 72px;
+    }
+}
+
+.main-title-p {
+    font-size: 12px;
+    line-height: 156%;
+    color: #FFFFFF;
+    max-width: 330px;
+    margin: 16px auto 32px;
+    @include lg {
+        font-size: 20px;
+        max-width: 562px;
+        margin-left: 0;
+    }
+}
+
+.simple-button-white {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    padding: 18px 38px;
+}
+
+.bg-wave-text-wrap {
+    text-align: center;
+    @include lg {
+        text-align: start;
+        max-width: 565px;
+    }
+}
+
+.advantages-p {
+    font-family: 'Golos';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 148.4%;
+    color: #252525;
+    max-width: 285px;
+    @include lg {
+        font-size: 25px;
+        max-width: 700px;
+    }
+}
+
+.advantages-span-red {
+    color: #F52525;
+}
+
+.advantages-wrap {
+    gap: 47px;
+    max-width: 400px;
+    height: 260px;
+    margin: 0 auto;
+    @include lg {
+        max-width: 900px;   
+    }
+}
+
+.rent-card-rate {
+    font-family: 'Golos';
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    color: #252525;
+}
+
+.rent-card-price {
+    font-family: 'Golos';
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #252525;
+}
+
+.rent-card-li {
+    font-size: 10px;
+    color: #252525;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.rent-card-li + .rent-card-li {
+    border-top: 1px solid #999999;                    
+}
+

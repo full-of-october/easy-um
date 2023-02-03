@@ -1,3 +1,35 @@
+.simple-button {
+    font-family: 'Golos';
+    font-size: 18px;
+    line-height: 148.4%;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 50px;
+    cursor: pointer;
+    @include lg {
+        font-size: 25px;
+    }
+
+} 
+
+.skeleton-button {
+    font-family: 'Golos';
+    font-weight: 700;
+    border: 1px solid;
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button-red {
+    background: #F52525;
+    border-color: #F52525;
+}
+
+.button-outlined {
+    background: none;
+}
+
 .number-span {
     color: rgba(188, 212, 255, 0.6);
     font-family: 'Golos';
@@ -37,4 +69,22 @@
         max-width: 385px;
     }
 }
+
+.section-title {
+    font-family: 'Golos';
+    font-size: 35px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    @include lg {
+        font-size: 42px;
+    }
+}
+
+.section-title.large {
+    font-size: 35px;
+    @include lg {
+        font-size: 72px;
+    }
+}
+
 
