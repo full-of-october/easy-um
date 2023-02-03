@@ -6,6 +6,12 @@
 
 @font-face {
     font-family: 'Golos';
+    src: url('../fonts/GolosText-Medium.woff') format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Golos';
     src: url('../fonts/GolosText-Bold.woff') format('woff2');
     font-weight: 700;
 }

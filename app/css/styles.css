@@ -4245,6 +4245,9 @@ select {
     max-width: 1200px;
   }
 }
+.collapse {
+  visibility: collapse;
+}
 .absolute {
   position: absolute;
 }
@@ -4266,9 +4269,6 @@ select {
 .-left-20 {
   left: -5rem;
 }
-.left-52 {
-  left: 13rem;
-}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -4276,6 +4276,12 @@ select {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+.mt-9 {
+  margin-top: 2.25rem;
+}
+.mb-8 {
+  margin-bottom: 2rem;
 }
 .mb-2 {
   margin-bottom: 0.5rem;
@@ -4294,9 +4300,6 @@ select {
 }
 .mb-9 {
   margin-bottom: 2.25rem;
-}
-.mb-8 {
-  margin-bottom: 2rem;
 }
 .mt-4 {
   margin-top: 1rem;
@@ -4321,9 +4324,6 @@ select {
 }
 .-mb-\[54px\] {
   margin-bottom: -54px;
-}
-.mt-6 {
-  margin-top: 1.5rem;
 }
 .block {
   display: block;
@@ -4424,9 +4424,8 @@ select {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+.pb-24 {
+  padding-bottom: 6rem;
 }
 .pr-3 {
   padding-right: 0.75rem;
@@ -4467,10 +4466,6 @@ select {
 }
 .text-\[8px\] {
   font-size: 8px;
-}
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
 }
 .font-bold {
   font-weight: 700;
@@ -4521,6 +4516,11 @@ select {
 .text-\[\#339900\] {
   --tw-text-opacity: 1;
   color: rgb(51 153 0 / var(--tw-text-opacity));
+}
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 .collapse {
   visibility: visible; }
@@ -7203,6 +7203,11 @@ progress {
 
 @font-face {
   font-family: 'Golos';
+  src: url("../fonts/GolosText-Medium.woff") format("woff2");
+  font-weight: 500; }
+
+@font-face {
+  font-family: 'Golos';
   src: url("../fonts/GolosText-Bold.woff") format("woff2");
   font-weight: 700; }
 
@@ -7316,41 +7321,28 @@ main {
   flex-grow: 1;
   transition: 0.3s; }
 
-.blue-text {
-  color: #337CFC; }
+.icon {
+  display: inline-block; }
 
-.red-text {
-  color: #F52525; }
+.insta {
+  width: 18px;
+  height: 18px;
+  background: url("/img/icons/instagram.svg"); }
 
-.white-text {
-  color: white; }
+.vk {
+  width: 20px;
+  height: 12px;
+  background: url("/img/icons/vk.svg"); }
 
-.simple-button {
-  font-family: 'Golos';
-  font-size: 18px;
-  line-height: 148.4%;
-  text-align: center;
-  border: 1px solid;
-  border-radius: 50px;
-  cursor: pointer; }
-  @media screen and (min-width: 1024px) {
-    .simple-button {
-      font-size: 25px; } }
+.telegram {
+  width: 16px;
+  height: 14px;
+  background: url("/img/icons/telegram.svg"); }
 
-.skeleton-button {
-  font-family: 'Golos';
-  font-weight: 700;
-  border: 1px solid;
-  border-radius: 50px;
-  cursor: pointer;
-  text-align: center; }
-
-.button-red {
-  background: #F52525;
-  border-color: #F52525; }
-
-.button-outlined {
-  background: none; }
+.youtube {
+  width: 20px;
+  height: 14px;
+  background: url("/img/icons/youtube.svg"); }
 
 .number-span {
   color: rgba(188, 212, 255, 0.6);
@@ -7386,21 +7378,6 @@ main {
   @media screen and (min-width: 1024px) {
     .course-card {
       max-width: 385px; } }
-
-.section-title {
-  font-family: 'Golos';
-  font-size: 35px;
-  margin-bottom: 25px;
-  font-weight: 700; }
-  @media screen and (min-width: 1024px) {
-    .section-title {
-      font-size: 42px; } }
-
-.section-title.large {
-  font-size: 35px; }
-  @media screen and (min-width: 1024px) {
-    .section-title.large {
-      font-size: 72px; } }
 
 .block-homescreen {
   padding-top: 200px;
@@ -7675,153 +7652,84 @@ main {
         margin-top: 24px;
         opacity: 1; } }
 
-.bg-wave {
-  background: url(../img/index/wave.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 100%; }
+.footer {
+  position: relative;
+  background-color: #337CFC;
+  padding-bottom: 53px;
+  color: #ffffff;
+  font-family: 'Golos', Arial, sans-serif;
+  padding-left: 18px;
+  padding-right: 18px; }
+  .footer:before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 660px;
+    top: -69px;
+    left: 0;
+    background-image: url("../img/layouts/footer-wave.png");
+    background-size: contain;
+    background-position: 50% 0; }
+    @media screen and (min-width: 1024px) {
+      .footer:before {
+        top: -125px;
+        background-size: cover; }
+    .footer {
+      padding-bottom: 225px;
+      padding-left: 0px;
+      padding-right: 0px; } }
+  .footer-title {
+    font-size: 15px;
+    font-weight: 700; }
+  .footer .container {
+    margin-top: -50px; }
 
-.bg-wave-padding {
-  padding: 24px 0 80px 0; }
-  @media screen and (min-width: 768px) {
-    .bg-wave-padding {
-      padding-left: 15px;
-      padding-right: 15px; } }
-
-.bg-wave-img {
-  border-radius: 35px;
-  overflow: hidden;
-  width: 300px;
-  margin: 0 auto; }
-  @media screen and (min-width: 1024px) {
-    .bg-wave-img {
-      border-radius: 50%; } }
-
-.main-title {
-  font-family: 'Golos';
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 104%;
-  color: #FFFFFF; }
-  @media screen and (min-width: 1024px) {
-    .main-title {
-      font-size: 72px; } }
-
-.main-title-p {
-  font-size: 12px;
-  line-height: 156%;
-  color: #FFFFFF;
-  max-width: 330px;
-  margin: 16px auto 32px; }
-  @media screen and (min-width: 1024px) {
-    .main-title-p {
-      font-size: 20px;
-      max-width: 562px;
-      margin-left: 0; } }
-
-.simple-button-white {
-  color: #FFFFFF;
-  border-color: #FFFFFF;
-  padding: 18px 38px; }
-
-.bg-wave-text-wrap {
-  text-align: center; }
-  @media screen and (min-width: 1024px) {
-    .bg-wave-text-wrap {
-      text-align: start;
-      max-width: 565px; } }
-
-.advantages-p {
-  font-family: 'Golos';
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 148.4%;
-  color: #252525;
-  max-width: 285px; }
-  @media screen and (min-width: 1024px) {
-    .advantages-p {
-      font-size: 25px;
-      max-width: 700px; } }
-
-.advantages-span-red {
-  color: #F52525; }
-
-.advantages-wrap {
-  gap: 47px;
-  max-width: 400px;
-  height: 260px;
-  margin: 0 auto; }
-  @media screen and (min-width: 1024px) {
-    .advantages-wrap {
-      max-width: 900px; } }
-
-.rent-card-rate {
-  font-family: 'Golos';
-  font-weight: 700;
-  font-size: 12px;
-  text-align: center;
-  color: #252525; }
-
-.rent-card-price {
-  font-family: 'Golos';
-  font-weight: 500;
-  font-size: 16px;
-  text-align: center;
-  color: #252525; }
-
-.rent-card-li {
-  font-size: 10px;
-  color: #252525;
-  padding-top: 10px;
-  padding-bottom: 10px; }
-
-.rent-card-li + .rent-card-li {
-  border-top: 1px solid #999999; }
-
-.footer-bg {
-  background: url(../img/index/wave_footer_mob.png);
-  height: 600px;
-  padding: 58px 30px 0 30px; }
-  @media screen and (min-width: 1024px) {
-    .footer-bg {
-      background: url(../img/index/wave_footer.png); } }
-
-.btn-secondary-white {
-  background: none;
-  color: white;
-  font-weight: 700;
-  font-family: 'Golos';
-  font-size: 15px;
+.footer-inner {
   display: flex;
+  justify-content: space-between; }
+
+.footer-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+  .footer-info-right {
+    max-width: 130px; }
+    @media screen and (min-width: 1024px) {
+      .footer-info-right {
+        max-width: 100%; }
+    .footer-info {
+      max-width: 170px;
+      display: block; } }
+
+.footer-nav {
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 15px; }
+  .footer-nav-list {
+    padding-left: 0;
+    min-width: 200px; }
+  .footer-nav-item {
+    margin-bottom: 9px; }
+  .footer-nav-link {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #F1F1F1;
+    transition: all 1.25s ease; }
+    .footer-nav-link:hover {
+      color: #ffffff;
+      font-weight: 500; }
+
+.socials {
+  display: flex;
   align-items: center;
-  padding-bottom: 17px;
-  border-radius: 0;
-  width: 315px;
-  border-bottom: 1px solid white;
-  cursor: pointer; }
-  .btn-secondary-white:hover {
-    background: none;
-    border: none;
-    color: white; }
+  gap: 10px;
+  padding-left: 0; }
 
-.white-tick {
-  background: url(../img/icons/white_tick.svg);
-  display: inline-block;
-  background-repeat: no-repeat;
-  width: 11px;
-  height: 6px; }
+.accordion-button.collapsed .icon {
+  transform: rotate(0); }
 
-.dropdown-menu-body {
-  width: 315px;
-  background: #337CFC;
-  border: none; }
-
-.dropdown-item {
-  font-family: 'Golos';
-  font-size: 15px;
-  color: #F1F1F1;
-  margin-bottom: 9px; }
+.accordion-button .icon {
+  transform: rotate(-180deg); }
 
 .header {
   color: red; }
@@ -7998,10 +7906,6 @@ main {
 }
   @media (min-width: 1024px) {
 
-  .lg\:static {
-    position: static;
-  }
-
   .lg\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -8077,10 +7981,6 @@ main {
 
   .lg\:flex-col {
     flex-direction: column;
-  }
-
-  .lg\:items-center {
-    align-items: center;
   }
 
   .lg\:justify-between {
