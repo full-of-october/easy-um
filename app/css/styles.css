@@ -4269,6 +4269,9 @@ select {
 .-left-20 {
   left: -5rem;
 }
+.left-52 {
+  left: 13rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -4280,8 +4283,14 @@ select {
 .mt-9 {
   margin-top: 2.25rem;
 }
+.mb-12 {
+  margin-bottom: 3rem;
+}
 .mb-8 {
   margin-bottom: 2rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
 }
 .mb-2 {
   margin-bottom: 0.5rem;
@@ -4319,11 +4328,11 @@ select {
 .mr-0 {
   margin-right: 0px;
 }
-.mb-4 {
-  margin-bottom: 1rem;
-}
 .-mb-\[54px\] {
   margin-bottom: -54px;
+}
+.mt-6 {
+  margin-top: 1.5rem;
 }
 .block {
   display: block;
@@ -4424,6 +4433,10 @@ select {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
 .pb-24 {
   padding-bottom: 6rem;
 }
@@ -4438,6 +4451,10 @@ select {
 }
 .font-golos {
   font-family: Golos, Arial, sans-serif;
+}
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 .text-h1 {
   font-size: 72px;
@@ -4516,11 +4533,6 @@ select {
 .text-\[\#339900\] {
   --tw-text-opacity: 1;
   color: rgb(51 153 0 / var(--tw-text-opacity));
-}
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
 }
 .collapse {
   visibility: visible; }
@@ -7321,6 +7333,15 @@ main {
   flex-grow: 1;
   transition: 0.3s; }
 
+.blue-text {
+  color: #337CFC; }
+
+.red-text {
+  color: #F52525; }
+
+.white-text {
+  color: white; }
+
 .icon {
   display: inline-block; }
 
@@ -7343,6 +7364,33 @@ main {
   width: 20px;
   height: 14px;
   background: url("/img/icons/youtube.svg"); }
+
+.simple-button {
+  font-family: 'Golos';
+  font-size: 18px;
+  line-height: 148.4%;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 50px;
+  cursor: pointer; }
+  @media screen and (min-width: 1024px) {
+    .simple-button {
+      font-size: 25px; } }
+
+.skeleton-button {
+  font-family: 'Golos';
+  font-weight: 700;
+  border: 1px solid;
+  border-radius: 50px;
+  cursor: pointer;
+  text-align: center; }
+
+.button-red {
+  background: #F52525;
+  border-color: #F52525; }
+
+.button-outlined {
+  background: none; }
 
 .number-span {
   color: rgba(188, 212, 255, 0.6);
@@ -7378,6 +7426,21 @@ main {
   @media screen and (min-width: 1024px) {
     .course-card {
       max-width: 385px; } }
+
+.section-title {
+  font-family: 'Golos';
+  font-size: 35px;
+  margin-bottom: 25px;
+  font-weight: 700; }
+  @media screen and (min-width: 1024px) {
+    .section-title {
+      font-size: 42px; } }
+
+.section-title.large {
+  font-size: 35px; }
+  @media screen and (min-width: 1024px) {
+    .section-title.large {
+      font-size: 72px; } }
 
 .block-homescreen {
   padding-top: 200px;
@@ -7652,6 +7715,109 @@ main {
         margin-top: 24px;
         opacity: 1; } }
 
+.bg-wave {
+  background: url(../img/index/wave.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 100%; }
+
+.bg-wave-padding {
+  padding: 24px 0 80px 0; }
+  @media screen and (min-width: 768px) {
+    .bg-wave-padding {
+      padding-left: 15px;
+      padding-right: 15px; } }
+
+.bg-wave-img {
+  border-radius: 35px;
+  overflow: hidden;
+  width: 300px;
+  margin: 0 auto; }
+  @media screen and (min-width: 1024px) {
+    .bg-wave-img {
+      border-radius: 50%; } }
+
+.main-title {
+  font-family: 'Golos';
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 104%;
+  color: #FFFFFF; }
+  @media screen and (min-width: 1024px) {
+    .main-title {
+      font-size: 72px; } }
+
+.main-title-p {
+  font-size: 12px;
+  line-height: 156%;
+  color: #FFFFFF;
+  max-width: 330px;
+  margin: 16px auto 32px; }
+  @media screen and (min-width: 1024px) {
+    .main-title-p {
+      font-size: 20px;
+      max-width: 562px;
+      margin-left: 0; } }
+
+.simple-button-white {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+  padding: 18px 38px; }
+
+.bg-wave-text-wrap {
+  text-align: center; }
+  @media screen and (min-width: 1024px) {
+    .bg-wave-text-wrap {
+      text-align: start;
+      max-width: 565px; } }
+
+.advantages-p {
+  font-family: 'Golos';
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 148.4%;
+  color: #252525;
+  max-width: 285px; }
+  @media screen and (min-width: 1024px) {
+    .advantages-p {
+      font-size: 25px;
+      max-width: 700px; } }
+
+.advantages-span-red {
+  color: #F52525; }
+
+.advantages-wrap {
+  gap: 47px;
+  max-width: 400px;
+  height: 260px;
+  margin: 0 auto; }
+  @media screen and (min-width: 1024px) {
+    .advantages-wrap {
+      max-width: 900px; } }
+
+.rent-card-rate {
+  font-family: 'Golos';
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  color: #252525; }
+
+.rent-card-price {
+  font-family: 'Golos';
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #252525; }
+
+.rent-card-li {
+  font-size: 10px;
+  color: #252525;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.rent-card-li + .rent-card-li {
+  border-top: 1px solid #999999; }
+
 .footer {
   position: relative;
   background-color: #337CFC;
@@ -7691,7 +7857,8 @@ main {
 .footer-info {
   width: 100%;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
   .footer-info-right {
     max-width: 130px; }
     @media screen and (min-width: 1024px) {
@@ -7725,11 +7892,75 @@ main {
   gap: 10px;
   padding-left: 0; }
 
-.accordion-button.collapsed .icon {
+.accordion-button.collapsed .white-tick {
   transform: rotate(0); }
 
-.accordion-button .icon {
+.accordion-button .white-tick {
   transform: rotate(-180deg); }
+
+.accordion-button {
+  border-bottom: 1px solid white;
+  padding-bottom: 17px;
+  width: 100%; }
+
+.white-tick {
+  background: url(../img/icons/white_tick.svg);
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 6px; }
+
+.footer-phone {
+  font-family: 'Golos';
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 15px; }
+  @media screen and (min-width: 1024px) {
+    .footer-phone {
+      font-size: 15px;
+      margin-top: 18px; } }
+
+.copyright-text {
+  color: #F1F1F1;
+  font-size: 8px;
+  margin-bottom: 3px; }
+  @media screen and (min-width: 1024px) {
+    .copyright-text {
+      font-size: 10px;
+      margin-bottom: 8px; } }
+
+.copyright {
+  text-align: right;
+  margin-top: 37px; }
+  @media screen and (min-width: 1024px) {
+    .copyright {
+      text-align: left; } }
+
+.address {
+  line-height: 156%;
+  margin-bottom: 16px;
+  font-size: 12px;
+  font-family: 'Golos';
+  text-align: right; }
+  @media screen and (min-width: 1024px) {
+    .address {
+      font-size: 14px;
+      margin-bottom: 80px;
+      text-align: start; } }
+
+.logo-text {
+  font-weight: 700;
+  font-size: 12px;
+  font-family: 'Golos'; }
+
+.logo-wrap {
+  border-left: 2px solid white;
+  height: 44px;
+  padding-left: 7px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 .header {
   color: red; }
@@ -7892,6 +8123,10 @@ main {
     display: flex;
   }
 
+  .md\:hidden {
+    display: none;
+  }
+
   .md\:max-w-none {
     max-width: none;
   }
@@ -7905,6 +8140,10 @@ main {
   }
 }
   @media (min-width: 1024px) {
+
+  .lg\:static {
+    position: static;
+  }
 
   .lg\:mx-0 {
     margin-left: 0px;
@@ -7983,6 +8222,10 @@ main {
     flex-direction: column;
   }
 
+  .lg\:items-center {
+    align-items: center;
+  }
+
   .lg\:justify-between {
     justify-content: space-between;
   }
@@ -8014,6 +8257,10 @@ main {
 
   .lg\:text-h4 {
     font-size: 20px;
+  }
+
+  .lg\:font-bold {
+    font-weight: 700;
   }
 }
   @media (min-width: 1200px) {

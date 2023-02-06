@@ -51,6 +51,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   &-right {
     max-width: 130px;
@@ -98,18 +99,83 @@
   padding-left: 0;
 }
 
-.accordion-button.collapsed .icon{
+.accordion-button.collapsed .white-tick{
   transform: rotate(0);
 }
 
-.accordion-button .icon {
+.accordion-button .white-tick {
   transform: rotate(-180deg);
 }
 
+.accordion-button {
+  border-bottom: 1px solid white;
+  padding-bottom: 17px;
+  width: 100%;
+}
+
 .white-tick {
-    background: url(../img/icons/white_tick.svg);
-    display: inline-block;
-    background-repeat: no-repeat;
-    width: 11px;
-    height: 6px;
+  background: url(../img/icons/white_tick.svg);
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 6px;
+}
+
+.footer-phone {
+    font-family: 'Golos';
+    font-weight: 700;
+    font-size: 12px;
+    margin-top: 15px;
+    @include lg {
+        font-size: 15px;
+        margin-top: 18px;
+    }
+}
+
+.copyright-text {
+    color: #F1F1F1;
+    font-size: 8px;
+    margin-bottom: 3px;
+    @include lg {
+        font-size: 10px;
+        margin-bottom: 8px;
+    }
+}
+
+.copyright {
+  text-align: right;
+  margin-top: 37px;
+
+  @include lg {
+    text-align: left;
+  }
+}
+
+.address {
+  line-height: 156%;
+  margin-bottom: 16px;
+  font-size: 12px;
+  font-family: 'Golos';
+  text-align: right;
+  @include lg {
+    font-size: 14px;
+    margin-bottom: 80px;
+    text-align: start;
+  }
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 12px;
+  font-family: 'Golos';
+}
+
+.logo-wrap {
+  border-left: 2px solid white;
+  height: 44px;
+  padding-left: 7px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
