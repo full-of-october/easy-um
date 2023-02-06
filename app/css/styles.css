@@ -4286,9 +4286,6 @@ select {
 .mb-12 {
   margin-bottom: 3rem;
 }
-.mb-8 {
-  margin-bottom: 2rem;
-}
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -4309,6 +4306,9 @@ select {
 }
 .mb-9 {
   margin-bottom: 2.25rem;
+}
+.mb-8 {
+  margin-bottom: 2rem;
 }
 .mt-4 {
   margin-top: 1rem;
@@ -7836,7 +7836,7 @@ main {
     background-image: url("../img/layouts/footer-wave.png");
     background-size: contain;
     background-position: 50% 0; }
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 768px) {
       .footer:before {
         top: -125px;
         background-size: cover; }
@@ -7861,7 +7861,7 @@ main {
   align-items: center; }
   .footer-info-right {
     max-width: 130px; }
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 768px) {
       .footer-info-right {
         max-width: 100%; }
     .footer-info {
@@ -7915,7 +7915,7 @@ main {
   font-weight: 700;
   font-size: 12px;
   margin-top: 15px; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 768px) {
     .footer-phone {
       font-size: 15px;
       margin-top: 18px; } }
@@ -7924,7 +7924,7 @@ main {
   color: #F1F1F1;
   font-size: 8px;
   margin-bottom: 3px; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 768px) {
     .copyright-text {
       font-size: 10px;
       margin-bottom: 8px; } }
@@ -7932,7 +7932,7 @@ main {
 .copyright {
   text-align: right;
   margin-top: 37px; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 768px) {
     .copyright {
       text-align: left; } }
 
@@ -7942,7 +7942,7 @@ main {
   font-size: 12px;
   font-family: 'Golos';
   text-align: right; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 768px) {
     .address {
       font-size: 14px;
       margin-bottom: 80px;
@@ -7953,7 +7953,7 @@ main {
   font-size: 12px;
   font-family: 'Golos'; }
 
-.logo-wrap {
+.logo-text-wrap {
   border-left: 2px solid white;
   height: 44px;
   padding-left: 7px;
@@ -7961,6 +7961,15 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center; }
+
+.logo-box {
+  width: 230px;
+  position: relative;
+  margin-bottom: 32px;
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .logo-box {
+      display: block; } }
 
 .header {
   color: red; }
@@ -8137,6 +8146,10 @@ main {
 
   .md\:flex-wrap {
     flex-wrap: wrap;
+  }
+
+  .md\:font-bold {
+    font-weight: 700;
   }
 }
   @media (min-width: 1024px) {
